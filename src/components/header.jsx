@@ -11,7 +11,7 @@ const Header = () => {
         <>
             <div className="heading">
                 <h1>PASSWORD GENERATOR</h1>
-                <p><i>Create Strong and Secure Passwords and PIN to keep your account safe.</i></p>
+                <h4><i>Create Strong and Secure Passwords and PIN to keep your account safe.</i></h4>
             </div>
         </>
     );
