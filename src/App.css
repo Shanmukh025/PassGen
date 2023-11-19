@@ -88,6 +88,10 @@ body {
   width: 330px;
   height: 50px;
 }
+.gap{
+  /* border: 2px solid blueviolet; */
+ height: 25px;
+}
 .selectionrange{
   /* border: 2px solid blueviolet; */
   display: flex;
@@ -180,14 +184,13 @@ input[type='checkbox']:checked + label::before {
 	align-items: center;
 	font-weight: 700;
 	font-size: 2vmin;
-	color: #303030;
 	z-index: 2;
 }
 
 .range-slider_line {
 	height: 0.5vmin;
 	width: 100%;
-	background-color: #e1e1e1;
+	background-color: #303030;
 	top: 50%;
 	transform: translateY(-50%);
 	left: 0;
@@ -199,7 +202,6 @@ input[type='checkbox']:checked + label::before {
 	position: absolute;
 	height: 0.5vmin;
 	width: 0;
-	background-color: #303030;
 }
 
 .genbtn {

@@ -32,7 +32,7 @@ return (
         <button className='copybtn' style={{ marginLeft: '10px' }}>copy</button>
         </div>
         <div className='selectionx'>
-        <h3><i>Choose password length</i></h3>
+        <h3><i>Choose password length.</i></h3>
         </div>
         <div className='selectionrange'>
         <div className="range-slider">
@@ -41,7 +41,7 @@ return (
             <div id="slider_line" className="range-slider_line-fill"></div>
             </div>
             <input
-            id="slider_input" className="range-slider_input" type="range" value={sliderValue} min="8" max="100"
+            id="slider_input" className="range-slider_input" type="range" value={sliderValue} min="8" max="36"
             onChange={handleSliderChange}
             />
         </div>
@@ -61,8 +61,7 @@ return (
         <input type='checkbox' id='symbols' name='symbols' value='symbols' />
         <label htmlFor='symbols'>Symbols</label>
         </div>
-        <div className='selectionx'>
-            <h3><i>Strength: Medium</i></h3>
+        <div className='gap'>
         </div>
         <button className="genbtn">
     <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
@@ -70,6 +69,10 @@ return (
     </svg>
     <span className="text">Generate</span>
     </button>
+    <div className='gap'></div>
+    <div className='selectionx'>
+            <h3><i>Strength: Medium</i></h3>
+        </div>
 </div>
     </>
 );
