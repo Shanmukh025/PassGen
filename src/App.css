@@ -64,6 +64,10 @@ body {
   cursor: pointer;
 }
 
+h4{
+  color: rgb(48, 28, 28);
+}
+
 .selection{
   /* border: 2px solid blueviolet; */
   display: flex;
@@ -85,6 +89,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: rgb(48, 28, 28);
   width: 330px;
   height: 50px;
 }
