@@ -25,7 +25,7 @@ const handleSliderChange = (event) => {
 }
 
 return (
-    <>
+<>
     <div className='mainbox'>
         <div className='passwordbox'>
         <h3>shanmukh123#</h3>
@@ -52,13 +52,13 @@ return (
         </div>
         <div className='selection'>
         <input type='checkbox' id='uppercase' name='uppercase' value='uppercase' />
-        <label htmlFor='uppercase'>Uppercase </label>
+        <label htmlFor='uppercase'>Lowercase</label>
         <input type='checkbox' id='lowercase' name='lowercase' value='lowercase' />
         <label htmlFor='lowercase'>Numbers</label>
         </div>
         <div className='selection'>
         <input type='checkbox' id='numbers' name='numbers' value='numbers' />
-        <label htmlFor='numbers'>Lowercase</label>
+        <label htmlFor='numbers'>Uppercase</label>
         <input type='checkbox' id='symbols' name='symbols' value='symbols' />
         <label htmlFor='symbols'>Symbols</label>
         </div>
@@ -75,7 +75,7 @@ return (
             <h3><i>Strength: Medium</i></h3>
         </div>
 </div>
-    </>
+</>
 );
 }
 

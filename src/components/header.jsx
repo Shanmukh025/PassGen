@@ -9,8 +9,14 @@ const Header = () => {
 
     return (
         <>
+        <nav>
+            <img src='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/pinterest-round-white-icon.png' alt='logo' />
+             PASSGEN
+            {/* <button>github</button>
+            <button>linkedin</button> */}
+        </nav>
             <div className="heading">
-                <h1>*PASSWORD GENERATOR*</h1>
+                <h1>PASSWORD GENERATOR</h1>
                 <h4><i>Create Strong and Secure Passwords to keep your accounts safe.</i></h4>
             </div>
         </>
