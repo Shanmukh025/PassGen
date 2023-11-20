@@ -18,7 +18,7 @@ return (
 <path d="M85 190.5H345V340.5C345 362.591 327.091 380.5 305 380.5H125C102.909 380.5 85 362.591 85 340.5V190.5Z" stroke="#121331" stroke-width="7" stroke-linejoin="round"/>
 <path d="M188.357 324.309L222.779 324.605C233.308 324.687 242.194 315.902 242.224 305.006C242.255 294.131 233.451 285.296 222.575 285.296H207.486C196.6 285.296 187.775 276.471 187.775 265.585C187.775 254.7 196.6 245.885 207.486 245.885H238.031M215.005 340V324.533M215.005 245.895V230" stroke="#121331" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-        The longer a password, the more secure it is. A strong password should be at least 10 to 15 characters long.
+        The longer the password, the more secure it is. A strong password should be minimum 12 to 16 characters long.
         </div>
         <div className='box1'>
         <svg width="70" height="70" viewBox="0 0 430 430" fill="none" xmlns="http://www.w3.org/2000/svg">

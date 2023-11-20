@@ -1,15 +1,27 @@
 import React, { useEffect, useState } from 'react';
 
 const Content = () => {
-const [sliderValue, setSliderValue] = useState(0);
+
+const [sliderValue, setSliderValue] = useState(6);
+
+const [checkboxData, setCheckboxData] = useState([
+    {title : "Lowercase", state : true},
+    {title : "Numbers", state : false},
+    {title : "Uppercase", state : false},
+    {title : "Symbols", state : false},
+]);
+
+const handleCheckboxChange = (i) => {
+    const newCheckboxData = [...checkboxData];
+    newCheckboxData[i].state = !newCheckboxData[i].state;
+    setCheckboxData(newCheckboxData);
+};
+
 useEffect(() => {
     showSliderValue();
 }, [sliderValue]);
 
 const showSliderValue = () => {
-    const slider_input = document.getElementById('slider_input');
-    const slider_thumb = document.getElementById('slider_thumb');
-    const slider_line = document.getElementById('slider_line');
 
     slider_thumb.innerHTML = slider_input.value;
 
@@ -20,20 +32,18 @@ const showSliderValue = () => {
     slider_line.style.width = slider_input.value + '%';
 }
 
-const handleSliderChange = (event) => {
-    setSliderValue(parseInt(event.target.value));
-}
 
 return (
 <>
     <div className='mainbox'>
         <div className='passwordbox'>
         <h3>shanmukh123#</h3>
-        <button className='copybtn' style={{ marginLeft: '10px' }}>copy</button>
+        <button className='copybtn' style={{ marginLeft: '10px' }} onClick={() => {}}>copy</button>
         </div>
         <div className='gap'></div>
+        {/* SLIDER */}
         <div className='selectionx'>
-        <h3><i>Choose password length.</i></h3>
+        <h3><i>Choose password length = {sliderValue}</i></h3>
         </div>
         <div className='selectionrange'>
         <div className="range-slider">
@@ -42,25 +52,37 @@ return (
             <div id="slider_line" className="range-slider_line-fill"></div>
             </div>
             <input
-            id="slider_input" className="range-slider_input" type="range" value={sliderValue} min="8" max="36"
-            onChange={handleSliderChange}
+            id="slider_input" className="range-slider_input" type="range" min="6" max="36"
+            value={sliderValue}
+            onChange={(e)=>setSliderValue(e.target.value)}
             />
         </div>
         </div>
+        {/* CHECKBOXES */}
         <div className='selectionx'>
         <h3><i>Choose text, numbers & symbols.</i></h3>
         </div>
         <div className='selection'>
-        <input type='checkbox' id='uppercase' name='uppercase' value='uppercase' />
+        {checkboxData.map((checkbox, index) => {
+            return (
+                <div key={index}>
+                    <input
+                    type="checkbox"
+                    checked={checkbox.state}
+                    onChange={() => handleCheckboxChange(index)}/>
+                    <label>{checkbox.title}</label>
+                    </div>)
+        })}
+        {/* <input type='checkbox' id='uppercase' name='uppercase' value='uppercase' checked={checkbox.state}/>
         <label htmlFor='uppercase'>Lowercase</label>
-        <input type='checkbox' id='lowercase' name='lowercase' value='lowercase' />
+        <input type='checkbox' id='lowercase' name='lowercase' value='lowercase' checked={checkbox.state}/>
         <label htmlFor='lowercase'>Numbers</label>
         </div>
         <div className='selection'>
-        <input type='checkbox' id='numbers' name='numbers' value='numbers' />
+        <input type='checkbox' id='numbers' name='numbers' value='numbers'checked={checkbox.state} />
         <label htmlFor='numbers'>Uppercase</label>
-        <input type='checkbox' id='symbols' name='symbols' value='symbols' />
-        <label htmlFor='symbols'>Symbols</label>
+        <input type='checkbox' id='symbols' name='symbols' value='symbols'checked={checkbox.state} />
+        <label htmlFor='symbols'>Symbols</label> */}
         </div>
         <div className='gap'>
         </div>
@@ -68,7 +90,7 @@ return (
     <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
         <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
     </svg>
-    <span className="text">Generate</span>
+    <span className="text">GENERATE</span>
     </button>
     <div className='gap'></div>
     <div className='selectionx'>

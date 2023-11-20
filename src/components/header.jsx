@@ -12,7 +12,7 @@ const Header = () => {
         <nav>
             <img src='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/pinterest-round-white-icon.png' alt='logo' />
              PASSGEN
-            {/* <button>github</button>
+            { /*<button>github</button>
             <button>linkedin</button> */}
         </nav>
             <div className="heading">

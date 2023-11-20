@@ -1,11 +1,11 @@
-@keyframes img {
+/* @keyframes img {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 800;
@@ -14,6 +14,7 @@
 h1{
   font-weight: bold;
   font-size: 45px;
+  color: rgb(213, 101, 16);
 }
 
 body {
@@ -62,7 +63,7 @@ nav span {
 footer {
   background-color: #333;
   color: #fff;
-  padding: 10px 0;
+  padding: 1px;
   text-align: center;
 }
 
@@ -141,12 +142,13 @@ h4{
 
 .selection{
   /* border: 2px solid blueviolet; */
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
   justify-content: space-around;
   align-items: center;
   width: 300px;
-  height: 50px;
-  
+  height: 100px;
+  gap: 5px;
 }
 .selection1{
   /* border: 2px solid blueviolet; */
@@ -194,7 +196,6 @@ label {
   position: relative;
   padding-left: 30px;
   cursor: pointer;
-  user-select: none;
   line-height: 20px;
   font-size: 16px;
 }
@@ -305,25 +306,25 @@ input[type='checkbox']:checked + label::before {
 }
 
 .sparkle {
-  fill: #AAAAAA;
+  fill: white;
   transition: all 600ms ease;
 }
 
 .text {
   font-weight: 600;
-  color: #AAAAAA;
+  color: white;
   transition: all 600ms ease;
-  font-size: medium;
+  font-size: 17.5px;
 }
 
 .genbtn:hover {
   background: linear-gradient(0deg, black);
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
 }
 
 .genbtn:hover .text {
   color: white;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .genbtn:hover .sparkle {
