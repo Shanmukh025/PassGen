@@ -28,9 +28,10 @@ return (
     <>
     <div className='mainbox'>
         <div className='passwordbox'>
-        <h3>shanmukh123@</h3>
+        <h3>shanmukh123#</h3>
         <button className='copybtn' style={{ marginLeft: '10px' }}>copy</button>
         </div>
+        <div className='gap'></div>
         <div className='selectionx'>
         <h3><i>Choose password length.</i></h3>
         </div>
