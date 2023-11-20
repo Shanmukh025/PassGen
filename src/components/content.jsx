@@ -1,37 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useForm } from './useForm';
 
 const Content = () => {
 
-const [sliderValue, setSliderValue] = useState(6);
+// const [sliderValue, setSliderValue] = useState(6);
 
-const [checkboxData, setCheckboxData] = useState([
-    {title : "Lowercase", state : true},
-    {title : "Numbers", state : false},
-    {title : "Uppercase", state : false},
-    {title : "Symbols", state : false},
-]);
 
-const handleCheckboxChange = (i) => {
-    const newCheckboxData = [...checkboxData];
-    newCheckboxData[i].state = !newCheckboxData[i].state;
-    setCheckboxData(newCheckboxData);
-};
+// useEffect(() => {
+//     showSliderValue();
+// }, [sliderValue]);
 
-useEffect(() => {
-    showSliderValue();
-}, [sliderValue]);
+// const showSliderValue = () => {
 
-const showSliderValue = () => {
+//     slider_thumb.innerHTML = slider_input.value;
 
-    slider_thumb.innerHTML = slider_input.value;
+//     const bulletPosition = (slider_input.value / slider_input.max);
+//     const space = slider_input.offsetWidth - slider_thumb.offsetWidth;
 
-    const bulletPosition = (slider_input.value / slider_input.max);
-    const space = slider_input.offsetWidth - slider_thumb.offsetWidth;
+//     slider_thumb.style.left = (bulletPosition * space) + 'px';
+//     slider_line.style.width = slider_input.value + '%';
+// }
 
-    slider_thumb.style.left = (bulletPosition * space) + 'px';
-    slider_line.style.width = slider_input.value + '%';
-}
+const[values, setValues] = useForm({
+    length: 6,
+    lowercase: true,
+    number: false,
+    uppercase: false,
+    symbols: false
+})
 
+const[result, setResult] = React.useState('')
 
 return (
 <>
@@ -43,10 +41,11 @@ return (
         <div className='gap'></div>
         {/* SLIDER */}
         <div className='selectionx'>
-        <h3><i>Choose password length = {sliderValue}</i></h3>
+        {/* <h3><i>Choose password length = {sliderValue}</i></h3> */}
+        <h3><i>Choose password length </i></h3>
         </div>
         <div className='selectionrange'>
-        <div className="range-slider">
+            {/* <div className="range-slider">
             <div id="slider_thumb" className="range-slider_thumb"></div>
             <div className="range-slider_line">
             <div id="slider_line" className="range-slider_line-fill"></div>
@@ -56,14 +55,16 @@ return (
             value={sliderValue}
             onChange={(e)=>setSliderValue(e.target.value)}
             />
-        </div>
+        </div> */}
+            <label htmlFor='length'>Length</label>
+            <input type='number' id="length" min={6} max={36} value={values.length} onChange={setValues} />
         </div>
         {/* CHECKBOXES */}
         <div className='selectionx'>
         <h3><i>Choose text, numbers & symbols.</i></h3>
         </div>
         <div className='selection'>
-        {checkboxData.map((checkbox, index) => {
+        {/* {checkboxData.map((checkbox, index) => {
             return (
                 <div key={index}>
                     <input
@@ -72,17 +73,17 @@ return (
                     onChange={() => handleCheckboxChange(index)}/>
                     <label>{checkbox.title}</label>
                     </div>)
-        })}
-        {/* <input type='checkbox' id='uppercase' name='uppercase' value='uppercase' checked={checkbox.state}/>
-        <label htmlFor='uppercase'>Lowercase</label>
-        <input type='checkbox' id='lowercase' name='lowercase' value='lowercase' checked={checkbox.state}/>
-        <label htmlFor='lowercase'>Numbers</label>
+        })} */}
+        <input type='checkbox' id='lowercase' name='lowercase' checked={values.lowercase} onChange={setValues} />
+        <label htmlFor='lowercase'>Lowercase</label>
+        <input type='checkbox' id='number' name='number' checked={values.number} onChange={setValues} />
+        <label htmlFor='number'>Numbers</label>
         </div>
         <div className='selection'>
-        <input type='checkbox' id='numbers' name='numbers' value='numbers'checked={checkbox.state} />
-        <label htmlFor='numbers'>Uppercase</label>
-        <input type='checkbox' id='symbols' name='symbols' value='symbols'checked={checkbox.state} />
-        <label htmlFor='symbols'>Symbols</label> */}
+        <input type='checkbox' id='uppercase' name='uppercase' checked={values.uppercase} onChange={setValues} />
+        <label htmlFor='uppercase'>Uppercase</label>
+        <input type='checkbox' id='symbols' name='symbols' checked={values.symbols} onChange={setValues} />
+        <label htmlFor='symbols'>Symbols</label>
         </div>
         <div className='gap'>
         </div>

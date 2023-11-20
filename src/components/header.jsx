@@ -6,12 +6,11 @@ const Header = () => {
     useEffect(() => {
         AOS.init();
     }, []);
-
     return (
         <>
         <nav>
             <img src='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/pinterest-round-white-icon.png' alt='logo' />
-             PASSGEN
+            PASSGEN
             { /*<button>github</button>
             <button>linkedin</button> */}
         </nav>
