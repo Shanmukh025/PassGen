@@ -15,8 +15,8 @@ const Header = () => {
             </div>
 
             <div className="nav-buttons">
-                <button><a href='https://github.com/Shanmukh025/passgen'>Github</a></button>
-                <button><a href='https://www.linkedin.com/in/shanmukh-anaparthi/'>LinkedIn</a></button>
+                <button><a href='https://github.com/Shanmukh025/passgen' target='_blank'>Github</a></button>
+                <button><a href='https://www.linkedin.com/in/shanmukh-anaparthi/' target='_blank'>LinkedIn</a></button>
             </div>
         </nav>
             <div className="heading">
