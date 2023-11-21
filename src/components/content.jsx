@@ -1,25 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from './useForm';
 
 const Content = () => {
 
-// const [sliderValue, setSliderValue] = useState(6);
+const [sliderValue, setSliderValue] = useState(6);
 
+useEffect(() => {
+    showSliderValue();
+}, [sliderValue]);
 
-// useEffect(() => {
-//     showSliderValue();
-// }, [sliderValue]);
+const showSliderValue = () => {
 
-// const showSliderValue = () => {
+    slider_thumb.innerHTML = slider_input.value;
 
-//     slider_thumb.innerHTML = slider_input.value;
+    const bulletPosition = (slider_input.value / slider_input.max);
+    const space = slider_input.offsetWidth - slider_thumb.offsetWidth;
 
-//     const bulletPosition = (slider_input.value / slider_input.max);
-//     const space = slider_input.offsetWidth - slider_thumb.offsetWidth;
-
-//     slider_thumb.style.left = (bulletPosition * space) + 'px';
-//     slider_line.style.width = slider_input.value + '%';
-// }
+    slider_thumb.style.left = (bulletPosition * space) + 'px';
+    slider_line.style.width = slider_input.value + '%';
+}
 
 const[values, setValues] = useForm({
     length: 6,
@@ -29,8 +28,6 @@ const[values, setValues] = useForm({
     symbols: false
 })
 
-const[result, setResult] = React.useState('')
-
 return (
 <>
     <div className='mainbox'>
@@ -39,13 +36,11 @@ return (
         <button className='copybtn' style={{ marginLeft: '10px' }} onClick={() => {}}>copy</button>
         </div>
         <div className='gap'></div>
-        {/* SLIDER */}
         <div className='selectionx'>
-        {/* <h3><i>Choose password length = {sliderValue}</i></h3> */}
-        <h3><i>Choose password length </i></h3>
-        </div>
+        <h3><i>Choose password length = {sliderValue}</i></h3>
+    </div>
         <div className='selectionrange'>
-            {/* <div className="range-slider">
+            <div className="range-slider">
             <div id="slider_thumb" className="range-slider_thumb"></div>
             <div className="range-slider_line">
             <div id="slider_line" className="range-slider_line-fill"></div>
@@ -55,9 +50,7 @@ return (
             value={sliderValue}
             onChange={(e)=>setSliderValue(e.target.value)}
             />
-        </div> */}
-            <label htmlFor='length'>Length</label>
-            <input type='number' id="length" min={6} max={36} value={values.length} onChange={setValues} />
+        </div>
         </div>
         {/* CHECKBOXES */}
         <div className='selectionx'>

@@ -9,10 +9,15 @@ const Header = () => {
     return (
         <>
         <nav>
-            <img src='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/pinterest-round-white-icon.png' alt='logo' />
-            PASSGEN
-            { /*<button>github</button>
-            <button>linkedin</button> */}
+            <div className="nav-logo">
+                <img src='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/pinterest-round-white-icon.png' alt='logo' />
+                PASSGEN
+            </div>
+
+            <div className="nav-buttons">
+                <button>Github</button>
+                <button>Linkedin</button>
+            </div>
         </nav>
             <div className="heading">
                 <h1>PASSWORD GENERATOR</h1>
