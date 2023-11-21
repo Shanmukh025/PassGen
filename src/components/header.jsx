@@ -28,7 +28,7 @@ const Header = () => {
         <>
             <nav>
                 <div className="nav-logo">
-                    <img src='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/pinterest-round-white-icon.png' alt='logo' />
+                    <img src='https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1694186829-where-to-watch-stream-my-big-fat-greek-wedding-3-64fb3d2c3fc85.png?crop=1xw:0.9955555555555555xh;center,top&resize=980:*' alt='logo' />
                     PASSGEN
                 </div>
 
