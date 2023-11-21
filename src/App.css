@@ -17,6 +17,11 @@ h1{
   color: rgb(45, 13, 141);
 }
 
+a{
+  text-decoration: none;
+  color: black;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -63,6 +68,7 @@ nav span {
   font-weight: 700;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
 }
 .heading{
   margin-top: 30px;
