@@ -6,8 +6,12 @@
     transform: rotate(360deg);
   }
 } */
+
+*{
+  font-family: 'JetBrains Mono', monospace;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 800;
 }
 
@@ -62,7 +66,6 @@ nav span {
   gap: .5rem;
 }
 .nav-buttons button{
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   padding: .6rem 1rem;
   font-size: 16px;
   font-weight: 700;
@@ -141,7 +144,6 @@ footer {
   align-items: center;
   text-align: center;
   border-radius: 20px;
-  font-family: 'JetBrains Mono', monospace;
 }
 
 .copybtn{
@@ -151,11 +153,9 @@ footer {
   color: black;
   font-weight: 600;
   cursor: pointer;
-  font-family: 'JetBrains Mono', monospace;
 }
 
 .genbtn{
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   padding: 10px;
   border-radius: 5px;
   background-color: blueviolet;
@@ -193,7 +193,7 @@ h4{
   justify-content: center;
   align-items: center;
   color: rgb(51, 22, 22);
-  width: 330px;
+  width: 350px;
   height: 50px;
 }
 .selectiony{
