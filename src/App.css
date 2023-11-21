@@ -63,7 +63,7 @@ nav span {
 }
 .nav-buttons button{
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  padding: .5rem 1.5rem;
+  padding: .6rem 1rem;
   font-size: 16px;
   font-weight: 700;
   border-radius: 5px;
@@ -120,6 +120,12 @@ footer {
 @media (max-width: 900px) {
   .boxx {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 500px){
+  .nav-buttons button{
+    padding: .2rem 0.6rem;
   }
 }
 
