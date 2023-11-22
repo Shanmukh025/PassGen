@@ -92,7 +92,7 @@ return (
     </button>
     <div className='gap'></div>
     <div className='selectionx'>
-            <h3>Strength: Medium</h3>
+            <h3>Strength: "Medium"</h3>
         </div>
 </div>
 <div className='gap'></div>
