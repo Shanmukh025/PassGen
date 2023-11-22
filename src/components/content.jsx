@@ -4,7 +4,7 @@ import { useForm } from './useForm';
 const Content = () => {
 
 const [sliderValue, setSliderValue] = useState(12);
-const [password, setPassword] = useState('Click "GENERATE"');
+const [password, setPassword] = useState('Click to "GENERATE"');
 const [passwordStrength, setPasswordStrength] = useState('');
 const [copied, setCopied] = useState(false);
 const [showCopyButton, setShowCopyButton] = useState(false);
