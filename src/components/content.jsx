@@ -42,7 +42,7 @@ const generatePassword = () => {
     values.lowercase ? 'abcdefghijklmnopqrstuvwxyz' : '',
     values.uppercase ? 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' : '',
     values.number ? '0123456789' : '',
-    values.symbols ? '!@#$%^&*()_+~|}{[]:;?><,/-=' : ''
+    values.symbols ? '!@#$%^&*()_+~|}{[]:;?></-=' : ''
     ].join('');
 
     let newPassword = '';
