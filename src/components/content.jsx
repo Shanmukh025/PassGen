@@ -85,9 +85,9 @@ return (
     <div className='mainbox'>
         <div className='passwordbox'>
         <h3>{password}</h3>
+        {showCopyButton ? (
         <button className='copybtn' style={{ marginLeft: '10px' }} onClick={handleCopyClick}>
-            {showCopyButton ? (copied ? 'Copied!' : 'Copy') : ''}
-        </button>
+        {copied ? 'Copied!' : 'Copy'}</button>) : null}
         </div>
         <div className='gap'></div>
         <div className='selectionx'>
