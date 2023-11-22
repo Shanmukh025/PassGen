@@ -48,7 +48,7 @@ const Header = () => {
             </nav>
             <div className="heading">
                 <h1>PASSWORD GENERATOR</h1>
-                <h4><i>Create Strong and Secure Passwords to keep your accounts safe.</i></h4>
+                <h4><i>Create Strong Passwords to Secure Your Accounts.</i></h4>
             </div>
         </>
     );

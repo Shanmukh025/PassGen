@@ -3,7 +3,7 @@ import { useForm } from './useForm';
 
 const Content = () => {
 
-const [sliderValue, setSliderValue] = useState(12);
+const [sliderValue, setSliderValue] = useState(16);
 const [password, setPassword] = useState('Click on "GENERATE"');
 const [passwordStrength, setPasswordStrength] = useState('');
 const [copied, setCopied] = useState(false);
@@ -19,12 +19,9 @@ useEffect(() => {
 }, [sliderValue, password]);
 
 const showSliderValue = () => {
-
     slider_thumb.innerHTML = slider_input.value;
-
     const bulletPosition = (slider_input.value / slider_input.max);
     const space = slider_input.offsetWidth - slider_thumb.offsetWidth;
-
     slider_thumb.style.left = (bulletPosition * space) + 'px';
     slider_line.style.width = slider_input.value + '%';
 }
@@ -47,30 +44,35 @@ const generatePassword = () => {
 
     let newPassword = '';
     for (let i = 0; i < sliderValue; i++) {
-      const randomIndex = Math.floor(Math.random() * characters.length);
+        const randomIndex = Math.floor(Math.random() * characters.length);
         newPassword += characters[randomIndex];
     }
-
     setPassword(newPassword);
 };
-
 
 const handleGenerateClick = () => {
     generatePassword();
     setCopied(false);
     setShowCopyButton(true);
+    setShowStrength(true);
 };
 
 const calculatePasswordStrength = (length) => {
-    if (length < 11) {
+    if (length < 10)
+    {
         setPasswordStrength('Medium');
-    } else if (length >= 12 && length <= 16) {
-        setPasswordStrength('Hard');
-    } else if(length >= 17 && length <= 24) {
-        setPasswordStrength('Very Hard');
     }
-    else {
-        setPasswordStrength('Impossible');
+    else if (length >= 11 && length <= 15)
+    {
+        setPasswordStrength('Good');
+    }
+    else if(length >= 16 && length <= 25)
+    {
+        setPasswordStrength('Very Good');
+    }
+    else
+    {
+        setPasswordStrength('Excellent');
     }
 };
 
@@ -132,8 +134,8 @@ return (
     </button>
     <div className='gap'></div>
     <div className='selectionx'>
-            <h3>Strength: "{passwordStrength}"</h3>
-        </div>
+        <h3>Strength = "{passwordStrength}"</h3>
+    </div>
 </div>
 <div className='gap'></div>
 <div className='gap'></div>
