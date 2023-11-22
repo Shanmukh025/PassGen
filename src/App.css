@@ -17,7 +17,7 @@
 
 h1{
   font-weight: bold;
-  font-size: 45px;
+  font-size: 40px;
   color: rgb(45, 13, 141);
 }
 
@@ -63,7 +63,7 @@ nav span {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
+  gap: 1rem;
 }
 .nav-buttons button{
   padding: .6rem 1rem;
@@ -130,6 +130,9 @@ footer {
   .nav-buttons button{
     padding: .2rem 0.6rem;
   }
+  .nav-buttons{
+    gap: 0.5rem;
+  }
 }
 
 .passwordbox {
@@ -176,7 +179,7 @@ h4{
   justify-content: space-around;
   align-items: center;
   width: 300px;
-  height: 70px;
+  height: 60px;
   gap: 5px;
 }
 .selection1{
@@ -203,11 +206,11 @@ justify-content: center;
 align-items: center;
 color: black;
 width: 390px;
-height: 80px;
+height: 10px;
 }
 .gap{
   /* border: 2px solid blueviolet; */
-  height: 25px;
+  height: 15px;
 }
 .selectionrange{
   /* border: 2px solid blueviolet; */
@@ -336,14 +339,14 @@ input[type='checkbox']:checked + label::before {
 
 .sparkle {
   fill: white;
-  transition: all 600ms ease;
+  transition: all 400ms ease;
 }
 
 .text {
   font-weight: 600;
   color: white;
-  transition: all 600ms ease;
-  font-size: 17.5px;
+  transition: all 400ms ease;
+  font-size: 19px;
 }
 
 .genbtn:hover {
@@ -358,5 +361,5 @@ input[type='checkbox']:checked + label::before {
 
 .genbtn:hover .sparkle {
   fill: white;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
