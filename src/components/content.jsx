@@ -4,11 +4,19 @@ import { useForm } from './useForm';
 const Content = () => {
 
 const [sliderValue, setSliderValue] = useState(12);
-const [password, setPassword] = useState('');
+const [password, setPassword] = useState('Click "GENERATE"');
+const [passwordStrength, setPasswordStrength] = useState('');
+const [copied, setCopied] = useState(false);
+const [showCopyButton, setShowCopyButton] = useState(false);
 
 useEffect(() => {
     showSliderValue();
 }, [sliderValue]);
+
+useEffect(() => {
+    showSliderValue();
+    calculatePasswordStrength(password.length);
+}, [sliderValue, password]);
 
 const showSliderValue = () => {
 
@@ -31,31 +39,55 @@ const[values, setValues] = useForm({
 
 const generatePassword = () => {
     const characters = [
-      values.lowercase ? 'abcdefghijklmnopqrstuvwxyz' : '',
-      values.uppercase ? 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' : '',
-      values.number ? '0123456789' : '',
-      values.symbols ? '!@#$%^&*()_+~`|}{[]:;?><,./-=' : ''
+    values.lowercase ? 'abcdefghijklmnopqrstuvwxyz' : '',
+    values.uppercase ? 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' : '',
+    values.number ? '0123456789' : '',
+    values.symbols ? '!@#$%^&*()_+~|}{[]:;?><,/-=' : ''
     ].join('');
 
     let newPassword = '';
     for (let i = 0; i < sliderValue; i++) {
       const randomIndex = Math.floor(Math.random() * characters.length);
-      newPassword += characters[randomIndex];
+        newPassword += characters[randomIndex];
     }
 
     setPassword(newPassword);
-  };
+};
 
-  const handleGenerateClick = () => {
+
+const handleGenerateClick = () => {
     generatePassword();
-  };
+    setCopied(false);
+    setShowCopyButton(true);
+};
+
+const calculatePasswordStrength = (length) => {
+    if (length < 11) {
+        setPasswordStrength('Medium');
+    } else if (length >= 12 && length <= 16) {
+        setPasswordStrength('Hard');
+    } else if(length >= 17 && length <= 24) {
+        setPasswordStrength('Very Hard');
+    }
+    else {
+        setPasswordStrength('Impossible');
+    }
+};
+
+const handleCopyClick = () => {
+    navigator.clipboard.writeText(password);
+    setCopied(true);
+};
+
 
 return (
 <>
     <div className='mainbox'>
         <div className='passwordbox'>
         <h3>{password}</h3>
-        <button className='copybtn' style={{ marginLeft: '10px' }} onClick={() => {}}>copy</button>
+        <button className='copybtn' style={{ marginLeft: '10px' }} onClick={handleCopyClick}>
+            {showCopyButton ? (copied ? 'Copied!' : 'Copy') : ''}
+        </button>
         </div>
         <div className='gap'></div>
         <div className='selectionx'>
@@ -100,7 +132,7 @@ return (
     </button>
     <div className='gap'></div>
     <div className='selectionx'>
-            <h3>Strength: "Medium"</h3>
+            <h3>Strength: "{passwordStrength}"</h3>
         </div>
 </div>
 <div className='gap'></div>
