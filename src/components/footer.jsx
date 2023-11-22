@@ -18,7 +18,7 @@ return (
 <path d="M85 190.5H345V340.5C345 362.591 327.091 380.5 305 380.5H125C102.909 380.5 85 362.591 85 340.5V190.5Z" stroke="#121331" stroke-width="7" stroke-linejoin="round"/>
 <path d="M188.357 324.309L222.779 324.605C233.308 324.687 242.194 315.902 242.224 305.006C242.255 294.131 233.451 285.296 222.575 285.296H207.486C196.6 285.296 187.775 276.471 187.775 265.585C187.775 254.7 196.6 245.885 207.486 245.885H238.031M215.005 340V324.533M215.005 245.895V230" stroke="#121331" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-        A strong password should be minimum 12 to 16 characters long. The longer the password, the more secure it is.
+        A strong password should be minimum 16 to 20 characters long. The longer the password, the more secure it is.
         </div>
         <div className='box1'>
         <svg width="70" height="70" viewBox="0 0 430 430" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,7 @@ Strong passwords use a combination of letters, numbers and symbols to create an 
 <path d="M147.3 183.76C145.4 178.497 142.324 173.737 138.307 169.842C134.291 165.947 129.439 163.018 124.12 161.28C123.81 161.18 123.5 161.08 123.19 161C122.6 160.82 122.01 160.66 121.4 160.53C120.012 160.182 118.602 159.925 117.18 159.76C116.74 159.76 116.3 159.66 115.85 159.63H115.52C115.22 159.63 114.92 159.61 114.62 159.57C114.43 159.56 114.24 159.56 114.05 159.57C113.64 159.57 113.24 159.57 112.83 159.57M336.59 168.63L336.95 169.47C343.145 184.025 346.333 199.682 346.32 215.5C346.064 224.869 344.629 234.169 342.05 243.18" stroke="#121331" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
-        To reduce your accounts from hacking & other cyber attacks your passwords should be unique to each account.
+        To protect your account from hacking & cyber attacks your passwords should be unique for  every account.
         </div>
     </div>
     <footer>
