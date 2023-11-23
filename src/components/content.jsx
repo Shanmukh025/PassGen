@@ -70,7 +70,7 @@ const calculatePasswordStrength = (length) => {
     {
         setPasswordStrength('Very Good');
     }
-    else if(length >= 26 && length <= 50)
+    else if(length >= 26 && length <= 40)
     {
         setPasswordStrength('Excellent');
     }
@@ -102,7 +102,7 @@ return (
             <div id="slider_line" className="range-slider_line-fill"></div>
             </div>
             <input
-            id="slider_input" className="range-slider_input" type="range" min="6" max="50"
+            id="slider_input" className="range-slider_input" type="range" min="6" max="40"
             value={sliderValue}
             onChange={(e)=>setSliderValue(e.target.value)}
             />
