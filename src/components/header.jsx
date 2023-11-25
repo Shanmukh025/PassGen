@@ -1,12 +1,9 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import React, { useEffect, useState } from 'react';
 
 const Header = () => {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
 
     useEffect(() => {
-        AOS.init();
         const handleResize = () => {
             setIsSmallScreen(window.innerWidth < 500);
         };
