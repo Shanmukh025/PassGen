@@ -143,12 +143,12 @@ footer {
 }
 
 .passwordbox {
-  border: 2px solid rgb(2, 53, 6);
+  border: 3.5px solid rgb(2, 53, 6);
   background-color: rgb(130, 238, 137);
   width: auto;
   height: 2px;
   margin: 0 auto;
-  padding: 35px;
+  padding: 33px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
