@@ -3,7 +3,7 @@ import { useForm } from './useForm';
 
 const Content = () => {
 
-const [sliderValue, setSliderValue] = useState(16);
+const [sliderValue, setSliderValue] = useState(15);
 const [password, setPassword] = useState('Click on "GENERATE"');
 const [passwordStrength, setPasswordStrength] = useState('');
 const [copied, setCopied] = useState(false);
@@ -58,19 +58,19 @@ const handleGenerateClick = () => {
 };
 
 const calculatePasswordStrength = (length) => {
-    if (length < 10)
+    if (length < 9)
     {
         setPasswordStrength('Medium');
     }
-    else if (length >= 11 && length <= 15)
+    else if (length >= 10 && length <= 14)
     {
         setPasswordStrength('Good');
     }
-    else if(length >= 16 && length <= 25)
+    else if(length >= 15 && length <= 24)
     {
         setPasswordStrength('Very Good');
     }
-    else if(length >= 26 && length <= 40)
+    else if(length >= 25 && length <= 40)
     {
         setPasswordStrength('Excellent');
     }
