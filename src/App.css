@@ -40,7 +40,7 @@ body {
 }
 
 nav {
-  max-width: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 15px;
@@ -97,10 +97,10 @@ nav span {
 }
 
 footer {
-  max-width: 100%;
+  width: 100%;
   background-color: black;
   color: #fff;
-  padding: 1px;
+  padding: 5px 15px;
   text-align: center;
 }
 
