@@ -31,7 +31,7 @@ body {
 }
 
 nav {
-  max-width: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 15px;
@@ -41,6 +41,14 @@ nav {
   font-family: "JetBrains Mono", monospace;
   font-size: 25px;
   font-weight: 1000;
+}
+
+footer {
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
 }
 
 nav img {
@@ -87,13 +95,6 @@ nav span {
   flex-direction: column;
 }
 
-footer {
-  width: 100%;
-  background-color: black;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-}
 
 .boxx {
   display: flex;
