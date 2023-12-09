@@ -40,7 +40,7 @@ body {
 }
 
 nav {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   align-items: center;
   padding: 15px;
@@ -100,7 +100,7 @@ footer {
   width: 100%;
   background-color: black;
   color: #fff;
-  padding: 5px 15px;
+  padding: 15px;
   text-align: center;
 }
 
@@ -135,6 +135,12 @@ footer {
   .boxx {
     flex-direction: column;
   }
+  .passwordbox{
+    max-width: 450px;
+  }
+  nav{
+    width: 100%;
+  }
 }
 
 @media (max-width: 500px) {
@@ -148,12 +154,15 @@ footer {
     font-size: 0px;
   }
   nav{
-    width: 100%;
     max-width: 100%;
+    width: 100%;
   }
   footer{
     width: 100%;
     max-width: 100%;
+  }
+  .passwordbox{
+    max-width: 250px;
   }
 }
 
