@@ -54,7 +54,6 @@ const handleGenerateClick = () => {
     generatePassword();
     setCopied(false);
     setShowCopyButton(true);
-    setShowStrength(true);
 };
 
 const calculatePasswordStrength = (length) => {
