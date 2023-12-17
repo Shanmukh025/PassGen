@@ -44,13 +44,16 @@ nav {
 }
 
 footer {
-  width: 100%;
+  max-width: 100%;
   background-color: black;
   color: #fff;
   padding: 10px;
   text-align: center;
 }
 
+.container{
+  max-width: 100%;
+}
 nav img {
   width: 50px;
   height: auto;
@@ -128,7 +131,7 @@ nav span {
     flex-direction: column;
   }
   .passwordbox{
-    max-width: 450px;
+    max-width: 400px;
   }
   nav{
     max-width: 100%;
@@ -146,14 +149,19 @@ nav span {
     font-size: 0px;
   }
   nav{
-    max-width: 100%;
-  }
-  footer{
     width: 100%;
     max-width: 100%;
   }
+  footer{
+    padding: 10px auto;
+    max-width: 100%;
+  }
   .passwordbox{
-    max-width: 250px;
+    max-width: 200px;
+  }
+  .copybtn{
+    margin-left: 155px;
+    position: relative;
   }
 }
 
