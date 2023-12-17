@@ -153,8 +153,8 @@ nav span {
     max-width: 100%;
   }
   footer{
-    padding: 10px auto;
-    max-width: 100%;
+    padding: 10px;
+    width: 120%;
   }
   .passwordbox{
     max-width: 200px;
