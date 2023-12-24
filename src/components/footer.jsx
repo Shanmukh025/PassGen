@@ -49,6 +49,18 @@ Strong passwords use a combination of letters, numbers and symbols to create an 
         To protect your account from hacking & cyber attacks your passwords should be unique for  every account.
         </div>
     </div>
+
+    {/* <div className='boxx'>
+        <div className='box2'>
+            1
+        </div>
+        <div className='box2'>
+            2
+        </div>
+        <div className='box2'>
+            3
+        </div>
+    </div> */}
     </>
 );
 };

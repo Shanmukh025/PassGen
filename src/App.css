@@ -51,7 +51,7 @@ footer {
   text-align: center;
 }
 
-.container{
+.container {
   max-width: 100%;
 }
 nav img {
@@ -98,7 +98,6 @@ nav span {
   flex-direction: column;
 }
 
-
 .boxx {
   display: flex;
   justify-content: center;
@@ -126,14 +125,26 @@ nav span {
   border-radius: 20px;
 }
 
+/* .box2 {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 340px;
+  height: 170px;
+  margin: 10px;
+  padding: 35px;
+} */
+
 @media (max-width: 900px) {
   .boxx {
     flex-direction: column;
   }
-  .passwordbox{
+  .passwordbox {
     max-width: 400px;
   }
-  nav{
+  nav {
     max-width: 100%;
   }
 }
@@ -148,18 +159,18 @@ nav span {
   nav span {
     font-size: 0px;
   }
-  nav{
+  nav {
     width: 100%;
     max-width: 100%;
   }
-  footer{
-    padding: 10px;
-    width: 120%;
+  footer {
+    padding: 15px;
+    width: 100%;
   }
-  .passwordbox{
+  .passwordbox {
     max-width: 300px;
   }
-  .copybtn{
+  .copybtn {
     margin-left: 155px;
     position: relative;
   }
@@ -168,8 +179,8 @@ nav span {
 @media (max-width: 767px) {
   .appstore-button,
   .button-text {
-      display: block;
-      margin: 0;
+    display: block;
+    margin: 0;
   }
 }
 
