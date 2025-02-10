@@ -38,7 +38,7 @@ const Header = () => {
                     ) : (
                         <>
                             <button><a href='https://github.com/Shanmukh025/' target='_blank'>Github</a></button>
-                            <button><a href='https://www.linkedin.com/in/shanmukh-anaparthi/' target='_blank'>LinkedIn</a></button>
+                            <button><a href='https://www.linkedin.com/in/anaparthishanmukh/' target='_blank'>LinkedIn</a></button>
                         </>
                     )}
                 </div>
